@@ -382,9 +382,13 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   -o-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
+.header__nav-link::after {
+  content: "";
+  height: 0;
+}
 .header__nav-link:hover {
   color: #78B6F4;
-  font-weight: 700;
+  text-shadow: 0 0 0.9px #78B6F4, 0 0 0.9px #78B6F4;
 }
 .header__nav-link:active {
   color: #78B6F4;
@@ -1106,8 +1110,12 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
 .footer__link:not(:last-of-type) {
   margin-bottom: 15px;
 }
+.footer__link::after {
+  content: "";
+  height: 0;
+}
 .footer__link:hover {
-  font-weight: 700;
+  text-shadow: 0 0 0.7px #78B6F4, 0 0 0.7px #78B6F4;
 }
 .footer__link:active {
   color: #121212;
