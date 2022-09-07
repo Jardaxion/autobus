@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="css/style.min.css">
+  <ink rel="preconnect" href="https://fonts.googleapis.com"></ink>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css">
+  <title>Автобусы</title>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__inner">
+        <div class="header__logo"><img class="header__logo-img" src="img/logo.svg" alt="Лого">
+          <h3 class="header__logo-text">rus <span>ticket.net<span></h3>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a class="header__nav-link" href="">О нас</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="">Пассажирам</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="">Перевозчиками</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="header__button whiteButton js-openModal" data-openModal="login">Войти </button>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="select">
+      <div class="container">
+        <div class="select__inner"> 
+          <div class="background"><img class="select__background-shoum" src="img/select/shoum.svg" alt=""><img class="select__background-map" src="img/select/map.svg" alt=""><img class="select__background-dotted" src="img/select/dotted.svg" alt=""><img class="select__background-autobus" src="img/select/autobus.svg" alt=""></div>
+          <div class="select__title">
+            <h2 class="select__title-text">ПРИОБРЕТАЙТЕ БИЛЕТЫ НА АВТОБУСЫ МЕЖДУГОРОДНЕГО И МЕЖДУНАРОДНОГО СООБЩЕНИЯ ПО САМОЙ <span>ВЫГОДНОЙ ЦЕНЕ</span></h2><img class="select__title-underline" src="img/underline.svg" alt="">
+          </div>
+          <form>
+            <div class="select__selects">
+              <label class="select__label" for="">
+                <p class="select__select-title">Откуда</p>
+                <div class="select_body" data-placholder="true" id="from">
+                  <select class="select" name="">
+                    <option value="1">Астрахань</option>
+                    <option value="2">Волгоград</option>
+                    <option value="3">Геленджик</option>
+                    <option value="4">Краснодар</option>
+                    <option value="5">Кущевкая</option>
+                  </select>
+                  <div class="select">
+                    <p><!-- placeholder(пустой по макету изначально) --></p>
+                    <p> 
+                      <svg width="12" height="9" viewbox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.80796 7.89212C6.40854 8.43981 5.59146 8.4398 5.19204 7.89212L1.09683 2.27673C0.614897 1.61591 1.0869 0.6875 1.90479 0.6875H10.0952C10.9131 0.6875 11.3851 1.61591 10.9032 2.27673L6.80796 7.89212Z" fill="#78B6F4"></path>
+                      </svg>
+                    </p>
+                  </div>
+                  <div class="options"><!-- Здесь автоматически создаются элементы из select --></div>
+                </div>
+              </label>
+              <button class="select__reverseButton">
+                <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.4243 17.9243C26.6586 17.6899 26.6586 17.3101 26.4243 17.0757L22.6059 13.2574C22.3716 13.023 21.9917 13.023 21.7574 13.2574C21.523 13.4917 21.523 13.8716 21.7574 14.1059L25.1515 17.5L21.7574 20.8941C21.523 21.1284 21.523 21.5083 21.7574 21.7426C21.9917 21.977 22.3716 21.977 22.6059 21.7426L26.4243 17.9243ZM1 18.1H26V16.9H1V18.1Z" fill="white"></path>
+                  <path d="M0.575737 5.42426C0.341421 5.18995 0.341421 4.81005 0.575737 4.57574L4.39411 0.757359C4.62843 0.523045 5.00833 0.523045 5.24264 0.757359C5.47696 0.991674 5.47696 1.37157 5.24264 1.60589L1.84853 5L5.24264 8.39411C5.47696 8.62843 5.47696 9.00833 5.24264 9.24264C5.00833 9.47696 4.62843 9.47696 4.39411 9.24264L0.575737 5.42426ZM26 5.6H1V4.4H26V5.6Z" fill="white"></path>
+                </svg>
+              </button>
+              <label class="select__label" for="">
+                <p class="select__select-title">Куда</p>
+                <div class="select_body" data-placholder="true" id="to">
+                  <select class="select" name="">
+                    <option value="1">Астрахань</option>
+                    <option value="2">Волгоград</option>
+                    <option value="3">Геленджик</option>
+                    <option value="4">Краснодар</option>
+                    <option value="5">Кущевкая</option>
+                  </select>
+                  <div class="select">
+                    <p><!-- placeholder(пустой по макету изначально) --></p>
+                    <p> 
+                      <svg width="12" height="9" viewbox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.80796 7.89212C6.40854 8.43981 5.59146 8.4398 5.19204 7.89212L1.09683 2.27673C0.614897 1.61591 1.0869 0.6875 1.90479 0.6875H10.0952C10.9131 0.6875 11.3851 1.61591 10.9032 2.27673L6.80796 7.89212Z" fill="#78B6F4"></path>
+                      </svg>
+                    </p>
+                  </div>
+                  <div class="options"><!-- Здесь автоматически создаются элементы из оригинального select --></div>
+                </div>
+              </label>
+            </div>
+            <div class="select__range"> 
+              <div class="select__range-dates">
+                <p class="select__range-date">пт 8.04.2022</p>
+                <p class="select__range-date active">сб 9.04.2022</p>
+                <p class="select__range-date">вс 10.04.2022</p>
+              </div>
+              <div class="select__range-range">
+                <input class="range" type="range" name="" min="0" max="2" value="1">
+                <select class="range__select" name="">
+                  <option>пт 8.04.2022</option>
+                  <option>сб 9.04.2022</option>
+                  <option>вс 10.04.2022</option>
+                </select>
+              </div>
+            </div>
+            <button class="select__button" type="submit">Найти рейс</button>
+          </form>
+        </div>
+      </div>
+    </section><img class="select__music" src="img/select/music.svg" alt="">
+    <section class="ourAdventages">
+      <div class="container">
+        <div class="ourAdventages__inner">
+          <div class="ourAdventages__blocks">
+            <div class="ourAdventages__block">
+              <h4 class="ourAdventages__block-title">Комфортно!</h4><img class="ourAdventages__block-underline" src="img/underline2.svg" alt="">
+              <p class="ourAdventages__block-text">Не обязательно приезжать на вокзал или автостанцию чтобы купить билет</p>
+            </div>
+            <div class="ourAdventages__block">
+              <h4 class="ourAdventages__block-title">Удобно!</h4><img class="ourAdventages__block-underline" src="img/underline2.svg" alt="">
+              <p class="ourAdventages__block-text">В личном кабинете сохраняется ваша история покупок и уведомления о бонусах</p>
+            </div>
+            <div class="ourAdventages__block">
+              <h4 class="ourAdventages__block-title">Выгодно!</h4><img class="ourAdventages__block-underline" src="img/underline2.svg" alt="">
+              <p class="ourAdventages__block-text">Цены на билеты ниже на 20%, чем на автовокзалах и автокассах</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="passengers">
+      <div class="container">
+        <div class="passengers__inner"> 
+          <h3 class="global__title passengers__globalTitle">Пассажирам</h3>
+          <h3 class="title passengers__title">Пассажирам</h3>
+          <div class="passengers__content">
+            <div class="passengers__left">
+              <p class="passengers__left-text">Консультации, касающиеся приобретения билетов вы сможете получить у нас.</p>
+              <p class="passengers__left-text">Ответы на вопросы о рейсах, маршрутах, времени отправления и марке траспортного средства.</p>
+              <p class="passengers__left-text">Для покупки билетов необходимо зарегистрироваться.</p>
+            </div>
+            <div class="passengers__right"><a class="passengers__right-link" href="tel:+79182147690">+7 918 214-78-90</a><a class="passengers__right-link" href="mailto:info@rusticket.net">info@rusticket.net</a><img class="passengers__right-underline" src="img/underline3.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="carriers">
+      <div class="container">
+        <div class="carriers__inner">
+          <h3 class="global__title carriers__globalTitle">Перевозчикам</h3>
+          <h3 class="title carriers__title">Перевозчикам</h3>
+          <div class="carriers__content"> 
+            <div class="carriers__left">
+              <div class="carriers__left-box">
+                <p class="carriers__box-text">Гибкие условия сотрудничиства ип гарантии надёжного партнёрства</p>
+              </div>
+              <div class="carriers__left-box">
+                <p class="carriers__box-text">Возможность тестовой эксплуатации системы rusbilent.net без каких-либо обязательств</p>
+              </div>
+            </div>
+            <div class="carriers__right"> 
+              <p class="carriers__right-text">Зарегестрирйтесь как перевозчик и мы поможем вам настроить продажу ваших билетов с помощью любых устройств.</p>
+              <p class="carriers__right-text">После установки вам будет доступно Всё! необходимое для вашей деятельности: информация, документы, наша поддержка.</p>
+              <div class="carriers__auth"><a class="carriers__auth-text" href="#">Регистрация</a><span>/</span><a class="carriers__auth-text" href="#">Логин</a></div>
+              <div class="passengers__right"><a class="passengers__right-link" href="tel:+79184659253">+7 918 465-92-53</a><a class="passengers__right-link" href="mailto:business@rusticket.net">business@rusticket.net</a><img class="carriers__right-underline" src="img/underline4.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="questions">
+      <div class="container">
+        <div class="questions__inner">
+          <h3 class="global__title questions__globalTitle">Вопросы</h3>
+          <h3 class="title questions__title">Вопросы</h3>
+          <div class="questions__content">
+            <div class="questions__question">
+              <div class="question__title">
+                <p class="question__title-text">О регистрации</p>
+                <div class="question__arrow">
+                  <svg width="22" height="14" viewbox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 -0.737154 0.675725 -0.737154 22 12)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 0.737154 -0.675725 -0.737154 11 0)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="question__content">
+                <p class="question__text question__content-item">Если вы впервые посещаете наш сайт, зарегистрируйтесь. В соответствии с Федеральным законом от 9 февраля 2007 г. № 16-ФЗ «О транспортной безопасности» при продаже билетов на автотранспорт производится персонифицированный учёт пассажиров.</p>
+              </div>
+            </div>
+            <div class="questions__question">
+              <div class="question__title">
+                <p class="question__title-text">Как купить билет</p>
+                <div class="question__arrow">
+                  <svg width="22" height="14" viewbox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 -0.737154 0.675725 -0.737154 22 12)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 0.737154 -0.675725 -0.737154 11 0)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="question__content">
+                <ol class="question__list question__content-item">
+                  <li class="question__list-item">Выберете пункт отправления, пунк прибытия и дату отправления. Нажмите кнопку 'Найти рейс'</li>
+                  <li class="question__list-item">В списке выберете подходящий вам рейс и заполните реквизитиы</li>
+                  <li class="question__list-item">Укажите количество детией, мест багажа.</li>
+                </ol><br>
+                <p class="question__text question__content-item">Нажмите кнопку "Купить" и следуйте инструкциям платёжной системы.</p>
+              </div>
+            </div>
+            <div class="questions__question">
+              <div class="question__title">
+                <p class="question__title-text">Как вернуть билет</p>
+                <div class="question__arrow">
+                  <svg width="22" height="14" viewbox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 -0.737154 0.675725 -0.737154 22 12)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 0.737154 -0.675725 -0.737154 11 0)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="question__content">
+                <p class="question__text question__content-item">
+                   Вы имеете право возвратить электронный билет в кассу до отправления транспортного средства и получить обратно полную стоимость проезда, перевозки багажа в случае:
+                  — отмены отправления транспортного средства
+                  <br>— задержки отправления транспортного средства более чем на час
+                  При возврате билета, производятся следующие удержания:<br>
+                  — возврат билета не позднее чем за 2 часа до отправления — 5%
+                  <br>— возврат билета в течение 2-х часов до отправления — 15%
+                  <br>— возврат билета в течение 3-х часов после отправления — 25%
+                </p>
+              </div>
+            </div>
+          </div>
+          <h3 class="global__title info__globalTitle">Информация</h3>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <div class="container">
+        <div class="info__inner"><img class="info__road" src="img/info/road.png" alt=""><img class="info__autobus" src="img/select/autobus.svg" alt="">
+          <div class="info__box">
+            <h3 class="title info__title">Посадка на автобус</h3>
+            <div class="info__box-top">
+              <div class="info__box-left">
+                <p class="info__box-text small">Посадка в автобус осуществляется в присутствии водителя-контролёра пассажирского транспорта.</p>
+              </div>
+              <div class="info__box-right">
+                <p class="info__box-text big">Перед посадкой в автобус предъявите водителю-контролёру документ,удостоверяющий Вашу личность, данные которого вы указали на сайте при покупке.</p>
+                <p class="info__box-text big">После проверки билета водителем-контролёром автобуса, займите указанное в билете или свободное место в салоне автобуса.</p>
+              </div>
+            </div>
+            <div class="info__box-bottom">
+              <h3 class="title mini">Для комфорта и безопасности всех пассажиров, рекомендуем придерживаться общепринятых этических норм поведения</h3>
+            </div>
+          </div>
+          <div class="info__box">
+            <h3 class="title info__title">Поездка с детьми</h3>
+            <div class="info__box-top">
+              <div class="info__box-left">
+                <p class="info__box-text big">Пассажир обязан иметь при себе документ, который подтверждает возраст ребёнка, перевозимого с предоставлением преимуществ по провозной оплате, и который в обязательном порядке предъявляется по первому требованию лиц, осуществляющих контроль за оплатой проезда.</p>
+              </div>
+              <div class="info__box-right"> 
+                <p class="info__box-text big">
+                   Согласно Закона Краснодарского края от 21 июля 2008 г. № 1539 — КЗ родители должностные лица принимают меры по недопущению нахождения в общественных местах без сопровождения родителей, родственников или ответственных лиц:
+                  <br>— несовершеннолетних в возрасте до 7 лет — круглосуточно,
+                  <br>— несовершеннолетних в возрасте от 7 до 14 лет — с 21 ч. до 6 ч.
+                  <br>— несовершеннолетних в возрасте от 14 лет до достижения совершеннолетия — с 22 ч. до 6 ч.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="info__box">
+            <h3 class="title info__title">Провоз животных</h3>
+            <div class="info__box-top">
+              <div class="info__box-left">
+                <p class="info__box-text big">На основании Постановления Правительства РФ от 14 февраля 2009 г. No 112 «Об утверждении Правил перевозок пассажиров и багажа автомобильным транспортом и городским наземным электрическим транспортом» допускается провоз в составе ручной клади животных и птиц в клетках с глухим дном (корзинах, коробках, контейнерах и др.).</p>
+              </div>
+              <div class="info__box-right">
+                <p class="info__box-text big">Размер указанных клеток (корзин, коробок, контейнеров) отвечает требованиям, предусмотренным п. 56 настоящих правил. В соответствии с Кодексом РФ об административных правонарушениях от 30 декабря 2001 No 195-ФЗ перевозка домашних животных и птиц в автомобильном транспортном средстве подлежит оплате, приобретается багажный билет.</p>
+              </div>
+            </div>
+          </div>
+          <div class="info__box">
+            <h3 class="title info__title">Провоз багажа</h3>
+            <p class="info__box-text margin">Вы можете провезти:</p><img class="info__box-bottomRoad" src="img/info/bottomline.png" alt="">
+            <div class="info__box-columns">
+              <p class="info__box-column">Ручную кладь бесплатно в количестве одного места, длина, габариты которого в сумме не превышают 120 см, одну пару лыж в чехле, детские санки, детскую коляску.</p>
+              <p class="info__box-column">Ручную кладь, количество или размер которой превышает установленную норму бесплатного провоза, при наличии багажного билета.</p>
+              <p class="info__box-column">Багаж в количестве не более двух мест, габариты каждого из которых в сумме не превышают 180 см, за плату в багажном отделении транспортного средства.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="line">
+      <div class="container">
+        <div class="line__inner">
+          <h3 class="line__text">быстро</h3><img class="line__stop" src="img/line/stop.svg" alt="">
+          <h3 class="line__text">без очереди</h3><img class="line__auto" src="img/line/auto.svg" alt="">
+          <h3 class="line__text">надёжно</h3>
+        </div>
+      </div>
+    </section>
+    <section class="buy">
+      <div class="container">
+        <div class="buy__inner"><img class="buy__background" src="img/map2.svg" alt="">
+          <div class="buy__button-cover"><a class="buy__button" href="#">Купить билет</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="document">
+      <div class="container">
+        <div class="document__inner">
+          <h3 class="global__title document__globalTitle">Документы</h3>
+          <h3 class="title document__title">Документы</h3>
+          <div class="document__content">
+            <div class="questions__question">
+              <div class="question__title">
+                <p class="question__title-text">Командировка</p>
+                <div class="question__arrow">
+                  <svg width="22" height="14" viewbox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 -0.737154 0.675725 -0.737154 22 12)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 0.737154 -0.675725 -0.737154 11 0)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="question__content">
+                <p class="question__text">
+                  При приобретении работником билета (Письмо Минфина России от 05.02.2010 г. No 03–03–05/18), электронного пассажирского билета для поездок на территории Российской Федерации и за рубеж подтверждающими документами являются в части:
+                  <br><br>Производственных расходов по оплате:
+                  <br><br>— чек контрольно-кассовой техники;
+                  <br><br>— чеки электронных терминалов при проведении операций с использованием банковской карты, держателем которой является работник
+                  <br><br>— подтверждение кредитного учреждения, в котором открыт работнику банковский счёт, предусматривающий совершение операций с использованием банковской карты, проведённой операции по оплате электронного билета
+                  <br><br>— или другой документ, подтверждающий произведённую оплату перевозки, оформленный на утверждённом бланке строгой отчётности
+                </p>
+              </div>
+            </div>
+            <div class="questions__question"> 
+              <div class="question__title">
+                <p class="question__title-text">Законодательство</p>
+                <div class="question__arrow">
+                  <svg width="22" height="14" viewbox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 -0.737154 0.675725 -0.737154 22 12)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 0.737154 -0.675725 -0.737154 11 0)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="question__content">
+                <p class="question__text">Все необходимые законы, законодательные акты и подзаконные акты в области пассажирских автомобильных перевозок вы сможете скачать здесь.</p><br><a class="question__link" href="#">Скачать</a>
+              </div>
+            </div>
+            <div class="questions__question"> 
+              <div class="question__title">
+                <p class="question__title-text">Цены и оферты</p>
+                <div class="question__arrow">
+                  <svg width="22" height="14" viewbox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 -0.737154 0.675725 -0.737154 22 12)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="1" y1="-1" x2="15.2788" y2="-1" transform="matrix(-0.675725 0.737154 -0.675725 -0.737154 11 0)" stroke="#52598B" stroke-width="2" stroke-linecap="round"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="question__content">
+                <p class="question__text">
+                  Стоимость услуг (цены на электронные билеты) зависят от выбранного направления следования, маршрута устанавливаются конкретным пассажироперевозчиком.
+                  <br>Покупка электронных билетов регулируется российским законодательством. Между Покупателем и Продавцом правоотношения описывает Договор оферты.
+                </p><br><a class="question__link" href="#">Скачать договор</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="safety">
+      <div class="container">
+        <div class="safety__inner">
+          <h3 class="global__title safety__globalTitle">Безопасность</h3>
+          <div class="safety__content">
+            <h3 class="title safety__title">Конфиденциальность</h3>
+            <p class="safety__text left">Политика конфидеиальности описыват формат, условия и механизм обработки персональнх данных пользователя</p><br>
+            <p class="safety__text left">Ознакомиться с политикой конфиденциальности компании вы можете скачав файл по <a href='#'>ссылке</a>.</p>
+            <h3 class="title safety__title">Платежная система</h3>
+            <p class="safety__text center">Услуга оплаты через интернет осуществляется в соответствии с Правилами международных платёжных систем на принципах соблюдения конфиденциальности и безопасности совершения платежа, для чего используются самые современные методы проверки, шифрования и передачи данных по закрытым каналам связи.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="aboutUs">
+      <div class="container">
+        <div class="aboutUs__inner">
+          <h3 class="global__title aboutUs__globalTitle">О нас</h3>
+          <h3 class="title aboutUs__title">О нас</h3>
+          <div class="aboutUs__top">
+            <div class="aboutUs__top-left"> 
+              <p class="aboutUs__text big">ООО «ЭпПойнт» – компания, которая специализируется на проектировании, разработке и системной интеграции программного обеспечения для всех участников рынка пассажирских перевозок. Одним из продуктов компании является система продажи билетов - RUSTICKET.NET.</p>
+            </div>
+            <div class="aboutUs__top-right"> 
+              <p class="aboutUs__text small">
+                RUSTICKET.NET-сервис, напрямую связывающий пассажиров и перевозчиков.
+                <br><br>RUSTICKET.NET стремится предоставить своим клиентам простой и удобный сервис для поиска и покупки билетов на автобусы междугороднего и международного сообщения. В режиме онлайн наши клиенты могут просмотреть все доступные варианты поездки и легко оплатить билет банковской картой.
+              </p>
+            </div>
+          </div>
+          <h3 class="title aboutUs__title">Контакты</h3>
+          <div class="aboutUs__bottom">
+            <div class="aboutUs__bottom-left">
+              <p class="aboutUs__bottom-text">ООО &quot;ЭпПойнт&quot;</p>
+              <p class="aboutUs__bottom-text">350 017 г. Краснодар, ул. им. Артюшкова, д.5, оф. 98</p>
+              <p class="aboutUs__bottom-text">info@ap-point.ru</p>
+              <p class="aboutUs__bottom-text">+7 018 465-92-53</p>
+            </div>
+            <div class="aboutUs__bottom-right"><img class="aboutUs__logo" src="img/aboutUs-logo.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__inner">
+        <p class="footer__title">© RUSTICKET.NET, 2021–2022</p>
+        <div class="footer__lists">
+          <p class="footer__title">Информация</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Посадка на автобус</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Поездка с детьми</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Провоз животных</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Провоз богажа</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Вопросы</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">О регистрации</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Как купить билет</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Как вернуть билет</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Документы</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Командировка</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Законодательство</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Цены и оферта</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Сервис</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Пассажирам</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Перевозчикам</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Безопасность</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Конфиденциальность</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Платежная система</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal__background"></div>
+  <div class="modal" data-modal="login">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <button class="modal__button-top js-closeModal" data-closeModal="login"><img class="modal__close" src="img/close.svg" alt=""></button>
+        <h3 class="title modal__title">Добро пожаловать!</h3><img class="modal__logo" src="img/logo.svg" alt="">
+      </div>
+      <div class="modal__content">
+        <form class="modal__form" action="">
+          <input class="modal__input" type="text" placeholder="Логин">
+          <input class="modal__input" type="password" placeholder="Пароль">
+          <div class="modal__input-columns">
+            <input id="remember" type="checkbox">
+            <label class="modal__label checkbox" for="remember">
+              <div class="checkbox__notActive"></div><img class="checkbox__active" src="img/checkbox.svg" alt="">
+              <p class="checkbox__text">Запомнить меня</p>
+            </label><a class="js-reOpenModal" href="#" data-closemodal="login" data-openmodal="forgot">Забыли пароль?</a>
+          </div>
+          <button class="modal__form-submit whiteButton" type="submit">Войти</button><a class="js-reOpenModal modal__bottomLink" href="#" data-closemodal="login" data-openmodal="reg">Регистрация</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-modal="reg">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <button class="modal__button-top js-closeModal" data-closeModal="reg"><img class="modal__close" src="img/close.svg" alt=""></button>
+        <div class="modal__line"><img class="modal__line-logo" src="img/logo.svg" alt="">
+          <h3 class="title modal__title">Регистрация</h3>
+        </div>
+      </div>
+      <div class="modal__content">
+        <form class="modal__form" action="">
+          <input class="modal__input" type="text" placeholder="Фамилия">
+          <input class="modal__input" type="text" placeholder="Имя">
+          <input class="modal__input" type="text" placeholder="Отчество">
+          <input class="modal__input" type="text" placeholder="Дата рождения">
+          <input class="modal__input" type="text" placeholder="Логин">
+          <input class="modal__input" type="password" placeholder="Пароль">
+          <button class="modal__form-submit whiteButton js-reOpenModal" type="submit">Создать</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-modal="thanks">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <button class="modal__button-top js-closeModal" data-closeModal="thanks"><img class="modal__close" src="img/close.svg" alt=""></button>
+      </div>
+      <div class="modal__content center"><img class="modal__logo center" src="img/logo.svg" alt="">
+        <h3 class="title modal__title">Спасибо</h3>
+        <p class="modal__text">Ваши билеты находятся в личном кабинете</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+  <script src="js/customSelect.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
