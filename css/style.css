@@ -2839,4 +2839,22 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   .ourAdventages__block-underline {
     width: 250px;
   }
+  .profile__page-form--bottom {
+    margin-left: 0;
+  }
+  .profile__page-form {
+    width: 250px !important;
+  }
+  .profileMobile__page-label--text {
+    font-size: 14px;
+  }
+  .profileMobile .select {
+    width: 136px !important;
+  }
+  .profileMobile__page-label {
+    margin-bottom: 20px;
+  }
+  .profileMobile__page-label input {
+    margin-bottom: 0;
+  }
 }
