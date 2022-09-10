@@ -2662,6 +2662,9 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   .profile {
     display: none;
   }
+  .profileMobile__template-text {
+    font-size: 14px;
+  }
 }
 @media (max-width: 480px) {
   .global__title {
@@ -2831,9 +2834,6 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   }
   .profile__page-link:not(:last-of-type) {
     margin-bottom: 10px;
-  }
-  .profileMobile__template-text {
-    font-size: 14px;
   }
 }
 @media (max-width: 375px) {
