@@ -1724,6 +1724,14 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   margin-bottom: 24px;
   margin-right: 61px;
 }
+.data__label-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .data__label-text {
   margin-right: 30px;
   font-size: 18px;
@@ -1856,7 +1864,15 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   color: #00216A;
   margin-bottom: 20px;
 }
-.buy__logos img:not(:last-of-type) {
+.buy__logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.buy__logos img {
   margin-right: 17px;
   margin-bottom: 15px;
 }
@@ -2266,6 +2282,9 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   .footer {
     padding: 80px 42px;
   }
+  .data__form-ticket {
+    width: auto;
+  }
 }
 @media (max-width: 1188px) {
   .line__text {
@@ -2355,6 +2374,52 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   .info__globalTitle {
     bottom: -25px;
     top: auto;
+  }
+  .data__ticket-form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .buy {
+    padding-bottom: 40px;
+  }
+  .buy__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .buy__price {
+    font-size: 18px;
+  }
+  .buy__but-payButton {
+    margin: 0 auto;
+  }
+  .buy__left, .buy__right {
+    width: 100%;
+  }
+  .buy__right {
+    margin-left: 0;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 40px;
+  }
+  .buy .checkbox__notActive {
+    min-width: 19px;
+  }
+  .data .select {
+    width: auto !important;
+  }
+  .data__label {
+    margin-right: 0;
+  }
+  .data__client-inputs {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   body {
     overflow-x: hidden;
@@ -2506,6 +2571,13 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   }
   .racesMobile {
     display: block;
+  }
+  .data__afterText {
+    margin-left: 0;
+  }
+  .data__buttonAdd {
+    margin: 0 auto;
+    margin-top: 10px;
   }
   .select__reverseButton {
     margin: 43px 15px 0 32px;
