@@ -2665,6 +2665,11 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   .profileMobile__template-text {
     font-size: 14px;
   }
+  .carriers__right-underline {
+    position: relative;
+    right: -39px;
+    top: -13px;
+  }
 }
 @media (max-width: 480px) {
   .global__title {
