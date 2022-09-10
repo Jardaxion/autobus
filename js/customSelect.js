@@ -5,8 +5,8 @@ function OnOffselect(idSelect, idOption){
 }
 
 //Function for replace text from options to headline select
-function replace(idSelect, idOption, idOptions){
-    $(idSelect+' p:first-of-type').text($('.'+idOption).html());
+function replace(idSelect, idOption, idOptions, selectId){
+    $(idSelect+' p:first-of-type').text($(selectId+' .'+idOption).html());
     OnOffselect(idSelect, idOptions)
 }
 
@@ -27,9 +27,10 @@ function onOverflow(overflow, selectBody){
     }
 }
 
-$('.select_body').each(function(){//Applying functions for all 
+$('.select_body').each(function(index){//Applying functions for all 
     let selectBody = '#'+$(this).attr('id') //We write down Id select (It is necessary to distinguish them from each other)
     let overflow = true;
+    let all = $('.select_body').length;
 
     $(selectBody + ' select option').each(function(i){
         $(selectBody + ' .options').append('<p class="option option'+i+'">'+$(this).text()+"</p>")
@@ -44,11 +45,12 @@ $('.select_body').each(function(){//Applying functions for all
     })
     
     $(selectBody + ' .options .option').click(function(){ //Set click on option
-        replace(selectBody + ' .select', $(this).attr('class').replace('option ', ''), selectBody + ' .options') //Aplying replace function
+        replace(selectBody + ' .select', $(this).attr('class').replace('option ', ''), selectBody + ' .options', selectBody) //Aplying replace function
         $(selectBody + ' select').prop('selectedIndex', $(this).attr('class').replace('option ', '').replace(/[^\d]/g, '')) //We look at which element we have selected and select the same element in the usual select
     });
 
     $(selectBody + ' .options .option').css('width', $(selectBody).width());
+    $(selectBody + ' .options').css('zIndex', all - index);
     $(selectBody + ' .select').css('width', $(selectBody).width());
 
     onOverflow(overflow, selectBody);

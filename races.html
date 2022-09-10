@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автобусы</title>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__inner"><a class="header__logo" href="index.html"><img class="header__logo-img" src="img/logo.svg" alt="Лого">
+          <h3 class="header__logo-text">rus <span>ticket.net<span></h3></a>
+        <button class="header__hamburger-button"><img class="hamburger" src="img/hamburger.svg" alt=""></button>
+        <div class="header__burger">
+          <button class="header__burger-close"><img class="header__burger-close--img" src="img/closeBlue.svg" alt=""></button>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item"><a class="header__nav-link" href="">О нас</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="">Пассажирам</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="">Перевозчиками</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <button class="header__button whiteButton js-openModal" data-openModal="login">Войти</button><img class="header__button-radio" src="img/radio.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="select">
+      <div class="container">
+        <div class="select__inner"> 
+          <div class="background"><img class="select__background-shoum" src="img/select/shoum.png" alt=""><img class="select__background-map" src="img/select/map.svg" alt=""><img class="select__background-dotted" src="img/select/dotted.svg" alt=""><img class="select__background-autobus" src="img/select/autobus.svg" alt=""></div>
+          <form>
+            <div class="select__selects">
+              <label class="select__label" for="">
+                <p class="select__select-title">Откуда</p>
+                <div class="select_body" data-placholder="true" id="from">
+                  <select class="select" name="">
+                    <option value="1">Астрахань</option>
+                    <option value="2">Волгоград</option>
+                    <option value="3">Геленджик</option>
+                    <option value="4">Краснодар</option>
+                    <option value="5">Кущевкая</option>
+                  </select>
+                  <div class="select">
+                    <p><!-- placeholder(пустой по макету изначально) --></p>
+                    <p> 
+                      <svg width="12" height="9" viewbox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.80796 7.89212C6.40854 8.43981 5.59146 8.4398 5.19204 7.89212L1.09683 2.27673C0.614897 1.61591 1.0869 0.6875 1.90479 0.6875H10.0952C10.9131 0.6875 11.3851 1.61591 10.9032 2.27673L6.80796 7.89212Z" fill="#78B6F4"></path>
+                      </svg>
+                    </p>
+                  </div>
+                  <div class="options"><!-- Здесь автоматически создаются элементы из select --></div>
+                </div>
+              </label>
+              <button class="select__reverseButton">
+                <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.4243 17.9243C26.6586 17.6899 26.6586 17.3101 26.4243 17.0757L22.6059 13.2574C22.3716 13.023 21.9917 13.023 21.7574 13.2574C21.523 13.4917 21.523 13.8716 21.7574 14.1059L25.1515 17.5L21.7574 20.8941C21.523 21.1284 21.523 21.5083 21.7574 21.7426C21.9917 21.977 22.3716 21.977 22.6059 21.7426L26.4243 17.9243ZM1 18.1H26V16.9H1V18.1Z" fill="white"></path>
+                  <path d="M0.575737 5.42426C0.341421 5.18995 0.341421 4.81005 0.575737 4.57574L4.39411 0.757359C4.62843 0.523045 5.00833 0.523045 5.24264 0.757359C5.47696 0.991674 5.47696 1.37157 5.24264 1.60589L1.84853 5L5.24264 8.39411C5.47696 8.62843 5.47696 9.00833 5.24264 9.24264C5.00833 9.47696 4.62843 9.47696 4.39411 9.24264L0.575737 5.42426ZM26 5.6H1V4.4H26V5.6Z" fill="white"></path>
+                </svg>
+              </button>
+              <label class="select__label" for="">
+                <p class="select__select-title">Куда</p>
+                <div class="select_body" data-placholder="true" id="to">
+                  <select class="select" name="">
+                    <option value="1">Астрахань</option>
+                    <option value="2">Волгоград</option>
+                    <option value="3">Геленджик</option>
+                    <option value="4">Краснодар</option>
+                    <option value="5">Кущевкая</option>
+                  </select>
+                  <div class="select">
+                    <p><!-- placeholder(пустой по макету изначально) --></p>
+                    <p> 
+                      <svg width="12" height="9" viewbox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.80796 7.89212C6.40854 8.43981 5.59146 8.4398 5.19204 7.89212L1.09683 2.27673C0.614897 1.61591 1.0869 0.6875 1.90479 0.6875H10.0952C10.9131 0.6875 11.3851 1.61591 10.9032 2.27673L6.80796 7.89212Z" fill="#78B6F4"></path>
+                      </svg>
+                    </p>
+                  </div>
+                  <div class="options"><!-- Здесь автоматически создаются элементы из оригинального select --></div>
+                </div>
+              </label>
+            </div>
+            <div class="select__range"> 
+              <div class="select__range-dates">
+                <p class="select__range-date">пт 8.04.2022</p>
+                <p class="select__range-date active">сб 9.04.2022</p>
+                <p class="select__range-date">вс 10.04.2022</p>
+              </div>
+              <div class="select__range-range">
+                <input class="range" type="range" name="" min="0" max="2" value="1">
+                <select class="range__select" name="">
+                  <option>пт 8.04.2022</option>
+                  <option>сб 9.04.2022</option>
+                  <option>вс 10.04.2022</option>
+                </select>
+              </div>
+            </div>
+            <button class="select__button" type="submit">Найти рейс</button>
+            <div class="races">
+              <div class="races__top">
+                <p class="races__top-item">Отправление</p>
+                <p class="races__top-item">Прибытие</p>
+                <p class="races__top-item">№ Рейса</p>
+                <p class="races__top-item big">Направление</p>
+                <p class="races__top-item">Своб. места</p>
+                <p class="races__top-item">Цена</p>
+              </div>
+              <div class="races__bottom">
+                <div class="races__race">
+                  <p class="races__race-item bold">15:30</p>
+                  <p class="races__race-item bold">19:54</p>
+                  <p class="races__race-item">87</p>
+                  <p class="races__race-item big">Геленджик - Краснодар</p>
+                  <p class="races__race-item">8</p>
+                  <p class="races__race-item bold blue">613 ₽</p>
+                </div>
+                <hr class="races__hr">
+                <div class="races__race">
+                  <p class="races__race-item bold">08:20</p>
+                  <p class="races__race-item bold">12:44</p>
+                  <p class="races__race-item">602</p>
+                  <p class="races__race-item big">Геленджик - Краснодар</p>
+                  <p class="races__race-item">11</p>
+                  <p class="races__race-item bold blue">633 ₽</p>
+                </div>
+                <hr class="races__hr">
+                <div class="races__race">
+                  <p class="races__race-item bold">19:10</p>
+                  <p class="races__race-item bold">23:30</p>
+                  <p class="races__race-item">114</p>
+                  <p class="races__race-item big">Геленджик - Краснодар</p>
+                  <p class="races__race-item red">2</p>
+                  <p class="races__race-item bold blue">1 575 ₽</p>
+                </div>
+              </div>
+            </div>
+            <div class="racesMobile">
+              <div class="racesMobile__race">
+                <div class="racesMobile__race-left">
+                  <div class="racesMobile__race-time">
+                    <p class="racesMobile__race-time--from">15:30</p><img class="racesMobile__race-line" src="img/lineTime.svg" alt=""/>
+                    <p class="racesMobile__race-time--to">19:54</p>
+                  </div>
+                  <p class="racesMobile__race-number">№ Рейса 87</p>
+                  <p class="racesMobile__race-place">Своб. места 8</p>
+                </div>
+                <div class="racesMobile__race-right">
+                  <p class="racesMobile__race-fromTo">Геленджик - Краснодар</p>
+                  <p class="racesMobile__race-price">613 ₽</p>
+                </div>
+              </div>
+              <hr class="races__hr">
+              <div class="racesMobile__race">
+                <div class="racesMobile__race-left">
+                  <div class="racesMobile__race-time">
+                    <p class="racesMobile__race-time--from">08:20</p><img class="racesMobile__race-line" src="img/lineTime.svg" alt=""/>
+                    <p class="racesMobile__race-time--to">12:44</p>
+                  </div>
+                  <p class="racesMobile__race-number">№ Рейса 602</p>
+                  <p class="racesMobile__race-place">Своб. места 11</p>
+                </div>
+                <div class="racesMobile__race-right">
+                  <p class="racesMobile__race-fromTo">Геленджик - Краснодар</p>
+                  <p class="racesMobile__race-price">633 ₽</p>
+                </div>
+              </div>
+              <hr class="races__hr">
+              <div class="racesMobile__race">
+                <div class="racesMobile__race-left">
+                  <div class="racesMobile__race-time">
+                    <p class="racesMobile__race-time--from">19:10</p><img class="racesMobile__race-line" src="img/lineTime.svg" alt=""/>
+                    <p class="racesMobile__race-time--to">23:30</p>
+                  </div>
+                  <p class="racesMobile__race-number">№ Рейса 114</p>
+                  <p class="racesMobile__race-place red">Своб. места 2</p>
+                </div>
+                <div class="racesMobile__race-right">
+                  <p class="racesMobile__race-fromTo">Геленджик - Краснодар</p>
+                  <p class="racesMobile__race-price">1 575 ₽</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__inner">
+        <p class="footer__title name">© RUSTICKET.NET, 2021–2022</p>
+        <div class="footer__lists">
+          <p class="footer__title">Информация</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Посадка на автобус</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Поездка с детьми</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Провоз животных</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Провоз богажа</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Вопросы</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">О регистрации</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Как купить билет</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Как вернуть билет</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Документы</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Командировка</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Законодательство</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Цены и оферта</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Сервис</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Пассажирам</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Перевозчикам</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Безопасность</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Конфиденциальность</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Платежная система</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal__background"></div>
+  <div class="modal" data-modal="login">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <button class="modal__button-top js-closeModal" data-closeModal="login"><img class="modal__close" src="img/close.svg" alt=""></button>
+        <h3 class="title modal__title">Добро пожаловать!</h3><img class="modal__logo" src="img/logo.svg" alt="">
+      </div>
+      <div class="modal__content">
+        <form class="modal__form" action="">
+          <input class="modal__input" type="text" placeholder="Логин">
+          <input class="modal__input" type="password" placeholder="Пароль">
+          <div class="modal__input-columns">
+            <input id="remember" type="checkbox">
+            <label class="modal__label checkbox" for="remember">
+              <div class="checkbox__notActive"></div><img class="checkbox__active" src="img/checkbox.svg" alt="">
+              <p class="checkbox__text">Запомнить меня</p>
+            </label><a class="js-reOpenModal" href="#" data-closemodal="login" data-openmodal="forgot">Забыли пароль?</a>
+          </div>
+          <button class="modal__form-submit whiteButton" type="submit">Войти</button><a class="js-reOpenModal modal__bottomLink" href="#" data-closemodal="login" data-openmodal="reg">Регистрация</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-modal="reg">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <button class="modal__button-top js-closeModal" data-closeModal="reg"><img class="modal__close" src="img/close.svg" alt=""></button>
+        <div class="modal__line"><img class="modal__line-logo" src="img/logo.svg" alt="">
+          <h3 class="title modal__title">Регистрация</h3>
+        </div>
+      </div>
+      <div class="modal__content">
+        <form class="modal__form" action="">
+          <input class="modal__input" type="text" placeholder="Фамилия">
+          <input class="modal__input" type="text" placeholder="Имя">
+          <input class="modal__input" type="text" placeholder="Отчество">
+          <input class="modal__input" type="text" placeholder="Дата рождения">
+          <input class="modal__input" type="text" placeholder="Логин">
+          <input class="modal__input" type="password" placeholder="Пароль">
+          <button class="modal__form-submit whiteButton js-reOpenModal" type="submit">Создать</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-modal="thanks">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <button class="modal__button-top js-closeModal" data-closeModal="thanks"><img class="modal__close" src="img/close.svg" alt=""></button>
+      </div>
+      <div class="modal__content center"><img class="modal__logo center" src="img/logo.svg" alt="">
+        <h3 class="title modal__title">Спасибо</h3>
+        <p class="modal__text">Ваши билеты находятся в личном кабинете</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+  <script src="js/customSelect.js"></script>
+  <script src="js/main.min.js"></script>
+</body>

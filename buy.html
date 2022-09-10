@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автобусы</title>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__inner"><a class="header__logo" href="index.html"><img class="header__logo-img" src="img/logo.svg" alt="Лого">
+          <h3 class="header__logo-text">rus <span>ticket.net<span></h3></a>
+        <button class="header__hamburger-button"><img class="hamburger" src="img/hamburger.svg" alt=""></button>
+        <div class="header__burger">
+          <button class="header__burger-close"><img class="header__burger-close--img" src="img/closeBlue.svg" alt=""></button>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item"><a class="header__nav-link" href="">О нас</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="">Пассажирам</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="">Перевозчиками</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <button class="header__button whiteButton js-openModal" data-openModal="login">Войти</button><img class="header__button-radio" src="img/radio.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="data">
+      <div class="container">
+        <div class="data__inner">
+          <div class="background"><img class="select__background-shoum" src="img/select/shoum.png" alt=""><img class="select__background-map" src="img/select/map.svg" alt=""></div>
+          <div class="data__content">
+            <h3 class="data__title">Введите данные пассажиров</h3>
+            <p class="data__textLeft"><a href="#">Войдите</a>, чтобы выбрать пассажиров из предыдущих поездок.</p>
+            <form class="data__form" action="">
+              <div class="data__form-ticket">
+                <div class="data__ticket-top">
+                  <p class="data__form-ticket--title">Билет - 1</p><img class="data__form-ticket--close" src="img/close.svg" alt="">
+                </div>
+                <div class="data__ticket-form">
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Фамилия</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Имя</p>
+                    <input class="data__input" type="text" value="Иван" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Отчество</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Документ</p>
+                    <div class="select_body data__select" data-placholder="false" id="buy_document1">
+                      <select class="select" name="">
+                        <option value="1">Паспорт</option>
+                        <option value="2">Свидетельство о рождении</option>
+                      </select>
+                      <div class="select">
+                        <p><!-- placeholder(пустой по макету изначально) --></p>
+                        <p> </p>
+                      </div>
+                      <div class="options"><!-- Здесь автоматически создаются элементы из select --></div>
+                    </div>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Серия</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Номер</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Дата выдачи</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Дата рождения</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Граждантсво</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Телефон</p>
+                    <input class="data__input" type="text" value="" placeholder="+7 (900) 000-00-00"/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">e-mail</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Багаж</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label auto" for="">
+                    <p class="data__label-text">Тариф</p>
+                    <div class="select_body data__select-mini" data-placholder="false" id="age1">
+                      <select class="select" name="">
+                        <option value="1">Взрослый</option>
+                        <option value="2">Детский</option>
+                      </select>
+                      <div class="select">
+                        <p><!-- placeholder(пустой по макету изначально) --></p>
+                        <p> 
+                          <svg width="12" height="9" viewbox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.80796 7.89212C6.40854 8.43981 5.59146 8.4398 5.19204 7.89212L1.09683 2.27673C0.614897 1.61591 1.0869 0.6875 1.90479 0.6875H10.0952C10.9131 0.6875 11.3851 1.61591 10.9032 2.27673L6.80796 7.89212Z" fill="#78B6F4"></path>
+                          </svg>
+                        </p>
+                      </div>
+                      <div class="options"><!-- Здесь автоматически создаются элементы из оригинального select --></div>
+                    </div>
+                    <p class="data__afterText">
+                      Детям до 5 лет билет не нужен.
+                      <br>Детский тариф распространяется на детей от 5 до 12 лет.
+                      <br>Взрослый тариф действует для всех пассажиров старше 12 лет.
+                    </p>
+                  </label><a class="data__buttonAdd whiteButton js-add-ticket" href="#">Добавить билет</a>
+                </div>
+              </div>
+              <div class="data__form-client">
+                <h4 class="data__client-title">Покупатель</h4>
+                <div class="data__client-inputs">
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Фамилия</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Имя</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Отчетво</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">Телефон</p>
+                    <input class="data__input" type="text" value="" placeholder="+7 (900) 000-00-00"/>
+                  </label>
+                  <label class="data__label" for="">
+                    <p class="data__label-text">e-mail</p>
+                    <input class="data__input" type="text" value="" placeholder=""/>
+                  </label>
+                </div>
+              </div>
+              <div class="data__buy"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="buy">
+      <div class="container">
+        <div class="buy__inner">
+          <div class="buy__left">
+            <input id="sogl" type="checkbox">
+            <label class="modal__label checkbox buy__label" for="sogl">
+              <div class="checkbox__notActive"></div><img class="checkbox__active" src="img/checkbox.svg" alt="">
+              <p class="checkbox__text">Я ознакомлен и согласен с <a href-'#'>публичной офертой</a> и даю согласие на <a href="#">обработку персональных данных</a></p>
+            </label>
+            <div class="buy__price">
+              <h4 class="buy__price-text">Всего к оплате: </h4><span class="buy__price-price">1 575 ₽</span>
+            </div>
+            <button class="buy__but-payButton" type="submit">Перейти к оплате</button>
+          </div>
+          <div class="buy__right">
+            <p class="buy__text">Способы оплаты</p>
+            <div class="buy__logos"><img src="img/card/visa.svg" alt="visa"><img src="img/card/masterCard.svg" alt="masterCard"><img src="img/card/mir.svg" alt="mir"><img src="img/card/payYandex.svg" alt="payYandex">
+            </div>
+            <p class="buy__secure">Безопасная оплата</p>
+            <p class="buy__secure-bottom">Ваши платиежные и личные данные надежно защищены</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__inner">
+        <p class="footer__title name">© RUSTICKET.NET, 2021–2022</p>
+        <div class="footer__lists">
+          <p class="footer__title">Информация</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Посадка на автобус</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Поездка с детьми</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Провоз животных</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Провоз богажа</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Вопросы</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">О регистрации</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Как купить билет</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Как вернуть билет</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Документы</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Командировка</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Законодательство</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Цены и оферта</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Сервис</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Пассажирам</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Перевозчикам</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Безопасность</p>
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="">Конфиденциальность</a></li>
+            <li class="footer__item"><a class="footer__link" href="">Платежная система</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal__background"></div>
+  <div class="modal" data-modal="login">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <button class="modal__button-top js-closeModal" data-closeModal="login"><img class="modal__close" src="img/close.svg" alt=""></button>
+        <h3 class="title modal__title">Добро пожаловать!</h3><img class="modal__logo" src="img/logo.svg" alt="">
+      </div>
+      <div class="modal__content">
+        <form class="modal__form" action="">
+          <input class="modal__input" type="text" placeholder="Логин">
+          <input class="modal__input" type="password" placeholder="Пароль">
+          <div class="modal__input-columns">
+            <input id="remember" type="checkbox">
+            <label class="modal__label checkbox" for="remember">
+              <div class="checkbox__notActive"></div><img class="checkbox__active" src="img/checkbox.svg" alt="">
+              <p class="checkbox__text">Запомнить меня</p>
+            </label><a class="js-reOpenModal" href="#" data-closemodal="login" data-openmodal="forgot">Забыли пароль?</a>
+          </div>
+          <button class="modal__form-submit whiteButton" type="submit">Войти</button><a class="js-reOpenModal modal__bottomLink" href="#" data-closemodal="login" data-openmodal="reg">Регистрация</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-modal="reg">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <button class="modal__button-top js-closeModal" data-closeModal="reg"><img class="modal__close" src="img/close.svg" alt=""></button>
+        <div class="modal__line"><img class="modal__line-logo" src="img/logo.svg" alt="">
+          <h3 class="title modal__title">Регистрация</h3>
+        </div>
+      </div>
+      <div class="modal__content">
+        <form class="modal__form" action="">
+          <input class="modal__input" type="text" placeholder="Фамилия">
+          <input class="modal__input" type="text" placeholder="Имя">
+          <input class="modal__input" type="text" placeholder="Отчество">
+          <input class="modal__input" type="text" placeholder="Дата рождения">
+          <input class="modal__input" type="text" placeholder="Логин">
+          <input class="modal__input" type="password" placeholder="Пароль">
+          <button class="modal__form-submit whiteButton js-reOpenModal" type="submit">Создать</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-modal="thanks">
+    <div class="modal__inner">
+      <div class="modal__top">
+        <button class="modal__button-top js-closeModal" data-closeModal="thanks"><img class="modal__close" src="img/close.svg" alt=""></button>
+      </div>
+      <div class="modal__content center"><img class="modal__logo center" src="img/logo.svg" alt="">
+        <h3 class="title modal__title">Спасибо</h3>
+        <p class="modal__text">Ваши билеты находятся в личном кабинете</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+  <script src="js/customSelect.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
