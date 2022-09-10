@@ -2668,6 +2668,9 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   .carriers__right-underline {
     position: relative;
   }
+  .modal__form-submit {
+    margin-left: 0 !important;
+  }
 }
 @media (max-width: 480px) {
   .global__title {
@@ -2734,9 +2737,6 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   }
   .carriers__auth-text {
     font-size: 12px;
-  }
-  .passengers__right-underline {
-    right: -15px;
   }
   .passengers__right-link {
     font-size: 12px;
@@ -2807,9 +2807,6 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
 .line__text:first-of-type {
     margin: 0;
   }
-  .carriers__right-underline {
-    right: 29px;
-  }
   .carriers__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2818,10 +2815,6 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   }
   .carriers__box-text {
     width: 100%;
-  }
-  .carriers__right-underline {
-    right: 137px;
-    top: 12px;
   }
   .profileMobilee__page-template .profileMobile__template-text:last-of-type {
     display: none;
@@ -2837,6 +2830,10 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   }
   .profile__page-link:not(:last-of-type) {
     margin-bottom: 10px;
+  }
+  .carriers__right-underline {
+    right: -32px;
+    top: -13px;
   }
 }
 @media (max-width: 375px) {
