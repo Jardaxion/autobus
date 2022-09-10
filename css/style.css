@@ -2857,4 +2857,7 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   .profileMobile__page-label input {
     margin-bottom: 0;
   }
+  .profile__page-link:not(:last-of-type) {
+    margin-right: 100px;
+  }
 }
