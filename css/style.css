@@ -2820,6 +2820,9 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   .profileMobilee__page-template .profileMobile__template-text:last-of-type {
     display: none;
   }
+  .profile__page-link:not(:last-of-type) {
+    margin-right: 96px;
+  }
 }
 @media (max-width: 375px) {
   .buy__button {
