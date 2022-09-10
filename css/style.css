@@ -2604,8 +2604,8 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
     right: -22px;
   }
   .carriers__right-underline {
-    right: 130px;
-    top: 34px;
+    right: -32px;
+    top: -13px;
     width: 228px;
   }
   .questions__question {
@@ -2667,8 +2667,6 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   }
   .carriers__right-underline {
     position: relative;
-    right: -39px;
-    top: -13px;
   }
 }
 @media (max-width: 480px) {
