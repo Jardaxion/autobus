@@ -2832,6 +2832,9 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   .profile__page-link:not(:last-of-type) {
     margin-bottom: 10px;
   }
+  .profileMobile__template-text {
+    font-size: 14px;
+  }
 }
 @media (max-width: 375px) {
   .buy__button {
@@ -2871,8 +2874,5 @@ input[type=checkbox]:checked + .checkbox .checkbox__active {
   }
   .profile__page-link:not(:last-of-type) {
     margin-right: 100px;
-  }
-  .profileMobile__template-text {
-    font-size: 14px;
   }
 }
